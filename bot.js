@@ -22,6 +22,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+//
+//Off of a YouTube video page, the following script meters audio decibel
+//levels (loudness) of a playing video.
+//
+
 var PROTOCOL = "https";
 
 // TODO: implement all platforms
@@ -123,11 +128,6 @@ var get_config_properties = function() {
         }());
     };
 
-
-//
-// Off of a YouTube video page, the following script meters audio decibel
-// levels (loudness) of a playing video.
-//
 
 document.addEventListener("DOMContentLoaded", () => {
     var config = get_config_properties(),
