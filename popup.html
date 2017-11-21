@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>RAD bot v0.01a</title>
+        <style type="text/css">
+        body {
+            margin: 10px;
+            white-space: nowrap;
+            width: 300px;
+        }
+        .hangright {
+            margin: 7px;
+            float: right;
+        }
+        #labels {
+            float: left;
+        }
+        #fields {
+            float: right;
+        }
+        #submit {
+            clear: both;
+        }
+        .label {
+            padding: 1px;
+            border: 2px;
+            margin: 3px;
+            height: 21px;
+        }
+        .field {
+            margin: 3px;
+            width: 50px;
+        }
+        
+        </style>
+    </head>
+    <body>
+        <h1>RAD bot</h1>
+        <div id="config" class="hangright">
+            <div id="labels">
+                <div class="label">loudness threshold:</div>
+                <div class="label">poll frequency:</div>
+                <div class="label">repeat alert:</div>
+                <div class="label">alert frequency:</div>
+                <div class="label">silence time elapsed threshold:</div>
+            </div>
+            <div id="fields">
+                <input class="field"
+                       title="Set the minimum decibel level the video audio should play at."
+                       type="text" id="loudness_threshold" value="0"><br/>
+                <input class="field"
+                       title="Set the number of seconds to wait in between each loudness check."
+                       type="text" id="poll_frequency" value="1"><br/>
+                <input class="field"
+                    title="Set whether or not to repeat the alert."
+                       type="checkbox" id="repeat_notify" checked><br/>
+                <input class="field"
+                    title="Set the number of seconds to wait in between each alert."
+                       type="text" id="notify_frequency" value="300"><br/>
+                <input class="field"
+                       title="Set the number of seconds to wait before alerting once silence is detected."
+                       type="text" id="silence_elapsed_threshold" value="30"><br/>
+            </div>
+            <div id="submit">
+                <button id="update">Udpate</button>
+            </div>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>
